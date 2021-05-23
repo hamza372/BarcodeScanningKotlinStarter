@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
             startActivityForResult(galleryIntent, RESULT_LOAD_IMAGE)
         })
 
-        frame?.setOnLongClickListener(OnLongClickListener {
+        innerImage?.setOnLongClickListener(OnLongClickListener {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 if (checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_DENIED || checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
                         == PackageManager.PERMISSION_DENIED) {
